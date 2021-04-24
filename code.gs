@@ -32,7 +32,7 @@ function doPost(e) {
 function reply_to_image(post_json,reply_token) {
   var reply_message = '';
   try {
-    var url = 'https://api.line.me/v2/bot/message/'+ post_json.events[0].message.id +'/content/';
+    var url = 'https://api-data.line.me/v2/bot/message/'+ post_json.events[0].message.id +'/content/';
     var image = getImage(url);
     var base64 = Utilities.base64Encode(image.getContent()); 
     
